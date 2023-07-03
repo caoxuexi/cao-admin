@@ -60,7 +60,7 @@
 // 导入组件之后无需注册可直接使用
 import SvgIcon from '@/components/SvgIcon/index.vue'
 import LangSelect from '@/components/LangSelect/index.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { validatePassword } from './rules'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
@@ -79,7 +79,9 @@ const loginRules = ref({
     {
       required: true,
       trigger: 'blur',
-      message: i18n.t('msg.login.usernameRule')
+      message: computed(() => {
+        return i18n.t('msg.login.usernameRule')
+      })
     }
   ],
   password: [

@@ -2,10 +2,24 @@
   <router-view />
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
+<script setup>
+import { generateNewStyle, writeNewStyle } from '@/utils/theme'
+import { useStore } from 'vuex'
+import { watchSwitchLang } from '@/utils/i18n'
+
+const store = useStore()
+generateNewStyle(store.getters.mainColor).then((newStyleText) => {
+  writeNewStyle(newStyleText)
+})
+
+/**
+ * 监听 语言变化，重新获取个人信息
+ */
+watchSwitchLang(() => {
+  if (store.getters.token) {
+    store.dispatch('user/getUserInfo')
+  }
+})
 </script>
 
 <style></style>

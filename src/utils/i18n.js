@@ -7,7 +7,6 @@ export function generateTitle(title) {
 }
 
 /**
- *
  * @param  {...any} cbs 所有的回调
  */
 export function watchSwitchLang(...cbs) {

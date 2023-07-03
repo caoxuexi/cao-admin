@@ -91,10 +91,10 @@ export default {
     feature: 'Feature',
     chapter: 'Chapter',
     author: 'Author',
-    name: 'Sunday',
-    job: 'A front-end development program',
+    name: 'CaoStudy',
+    job: 'A full-stack development programer',
     Introduction:
-      'A senior technical expert, once worked in a domestic first-line Internet company, and has coordinated multiple large-scale projects with more than tens of millions of users. Committed to researching big front-end technology, he has been invited to participate in domestic front-end technology sharing sessions many times, such as: Google China Technology Sharing Session in 2018.'
+      "At present, I am studying for a master's degree in Xidian University, and I have completed the development work of many large-scale software during the school"
   },
   userInfo: {
     print: 'Print',
@@ -139,7 +139,8 @@ export default {
     importSuccess: ' Employee data imported successfully',
     dialogTitle1: 'Are you sure you want to delete the user ',
     dialogTitle2: ' Is it?',
-    roleDialogTitle: 'Configure roles'
+    roleDialogTitle: 'Configure roles',
+    exportName: 'save name'
   },
   role: {
     buttonTxt: 'New Role',

@@ -90,10 +90,10 @@ export default {
     feature: '功能',
     chapter: '章节',
     author: '作者',
-    name: 'Sunday',
-    job: '一个前端开发程序猿',
+    name: '曹学习',
+    job: '一个全栈开发工程师',
     Introduction:
-      '高级技术专家，曾就职于国内一线互联网公司，统筹过的多个大型项目用户数已过千万级。致力于研究大前端技术，多次受邀参加国内前端技术分享会，如：2018 年 Google 中国技术分享会。'
+      '目前西安电子科技大学硕士在读，在校期间完成过多款大型软件的开发工作'
   },
   userInfo: {
     print: '打印',
@@ -138,7 +138,8 @@ export default {
     importSuccess: ' 条员工数据导入成功',
     dialogTitle1: '确定要删除用户 ',
     dialogTitle2: ' 吗？',
-    roleDialogTitle: '配置角色'
+    roleDialogTitle: '配置角色',
+    exportName: '保存名'
   },
   role: {
     buttonTxt: '新增角色',

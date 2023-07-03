@@ -4,7 +4,7 @@
       <el-avatar
         :size="logoHeight"
         shape="square"
-        src="https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png"
+        src="http://175.24.232.157:9000/cao-hire/微信图片_20230630212725.jpg"
       />
       <h1 class="logo-title" v-if="$store.getters.sidebarOpened">cao-admin</h1>
     </div>

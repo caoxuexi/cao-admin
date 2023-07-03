@@ -24,7 +24,7 @@ export const generateRoutes = (routes, basePath = '/', prefixTitle = []) => {
       route.meta &&
       route.meta.title &&
       !re.exec(route.path) &&
-      !res.find(item => item.path === data.path)
+      !res.find((item) => item.path === data.path)
     ) {
       const i18ntitle = i18n.global.t(`msg.route.${route.meta.title}`)
       data.title = [...data.title, i18ntitle]

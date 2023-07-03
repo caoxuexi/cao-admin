@@ -13,6 +13,8 @@ const getters = {
     }
   },
   mainColor: (state) => state.theme.mainColor,
+  language: (state) => state.app.language,
+  tagsViewList: (state) => state.app.tagsViewList,
   /**
    * @returns true 表示已存在用户信息
    */

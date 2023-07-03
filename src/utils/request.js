@@ -20,6 +20,8 @@ service.interceptors.request.use(
         store.dispatch('user/logout')
         return Promise.reject(new Error('token 失效'))
       }
+      // 配置接口国际化
+      config.headers['Accept-Language'] = store.getters.language
       // 如果token存在 注入token
       config.headers.Authorization = `Bearer ${store.getters.token}`
     }
