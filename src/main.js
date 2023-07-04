@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import installElementPlus from './plugins/element'
+import installDirective from '@/directives'
 // 导入全局样式
 import './styles/index.scss'
 // 导入 svgIcon
@@ -19,6 +20,7 @@ const app = createApp(App)
 installFilter(app)
 installElementPlus(app)
 installIcons(app)
+installDirective(app)
 app.use(store).use(router).use(i18n).mount('#app')
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

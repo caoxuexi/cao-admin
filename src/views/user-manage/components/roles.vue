@@ -58,11 +58,12 @@ const userRoleTitleList = ref([])
 // 获取当前用户角色
 const getUserRoles = async () => {
   const res = await userRoles(props.userId)
-  userRoleTitleList.value = res.role.map(item => item.title)
+  userRoleTitleList.value = res.role.map((item) => item.title)
 }
 watch(
   () => props.userId,
-  val => {
+  (val) => {
+    userRoleTitleList.value = []
     if (val) getUserRoles()
   }
 )
@@ -73,8 +74,8 @@ watch(
 const i18n = useI18n()
 const onConfirm = async () => {
   // 处理数据结构
-  const roles = userRoleTitleList.value.map(title => {
-    return allRoleList.value.find(role => role.title === title)
+  const roles = userRoleTitleList.value.map((title) => {
+    return allRoleList.value.find((role) => role.title === title)
   })
 
   await updateRole(props.userId, roles)
