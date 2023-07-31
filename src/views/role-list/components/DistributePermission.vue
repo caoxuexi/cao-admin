@@ -71,7 +71,7 @@ const getRolePermission = async () => {
 
 watch(
   () => props.roleId,
-  val => {
+  (val) => {
     if (val) getRolePermission()
   }
 )

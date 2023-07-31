@@ -14,6 +14,8 @@ import './permission'
 // 导入element的图标
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import installFilter from '@/filters'
+// 导入全局异常处理
+import errorHandler from './utils/errorHandler'
 
 const app = createApp(App)
 // filter
@@ -22,6 +24,8 @@ installElementPlus(app)
 installIcons(app)
 installDirective(app)
 app.use(store).use(router).use(i18n).mount('#app')
+// 全局代码错误捕捉
+app.config.errorHandler = errorHandler
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
